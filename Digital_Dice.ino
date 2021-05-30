@@ -19,9 +19,6 @@ int On=1; //<On=0; for Common anode><On=1; for Common cathode>
 int Off;
 
 void setup() {
-  // Enable serial port for debugging
-  Serial.begin(9600);
- 
   randomSeed(analogRead(PIN_CHAOS));
 
   pinMode(aPin, OUTPUT);
@@ -43,7 +40,6 @@ void setup() {
   }  
   tone(PIN_BUZZER, BEEP_FREQUENCY, 250);  // Beep when done
   delay(1000);              // Wait for 1 second
-  Serial.println("Ready");
 }
 
 void loop() {
